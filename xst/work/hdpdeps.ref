@@ -1,0 +1,25 @@
+V3 13
+FL "C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/Circuito.vhf" 2020/10/29.14:33:53 P.20131013
+EN work/Circuito 1604006066 \
+      FL "C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/Circuito.vhf" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/Circuito/BEHAVIORAL 1604006067 \
+      FL "C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/Circuito.vhf" \
+      EN work/Circuito 1604006066 CP led_pattern CP debounce CP GND
+FL "C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/debounce.vhd" 2020/10/29.13:24:11 P.20131013
+EN work/debounce 1604006064 \
+      FL "C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/debounce.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/debounce/Behavioral 1604006065 \
+      FL "C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/debounce.vhd" \
+      EN work/debounce 1604006064
+FL "C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/led_pattern.vhd" 2020/10/29.15:14:19 P.20131013
+EN work/led_pattern 1604006062 \
+      FL "C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/led_pattern.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/led_pattern/Behavioral 1604006063 \
+      FL "C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/led_pattern.vhd" \
+      EN work/led_pattern 1604006062

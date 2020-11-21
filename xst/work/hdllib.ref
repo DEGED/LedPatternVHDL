@@ -1,0 +1,6 @@
+AR debounce behavioral "C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/debounce.vhd" sub00/vhpl05 1604006065
+EN debounce NULL "C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/debounce.vhd" sub00/vhpl04 1604006064
+AR circuito behavioral "C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/Circuito.vhf" sub00/vhpl03 1604006067
+EN circuito NULL "C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/Circuito.vhf" sub00/vhpl02 1604006066
+EN led_pattern NULL "C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/led_pattern.vhd" sub00/vhpl00 1604006062
+AR led_pattern behavioral "C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/led_pattern.vhd" sub00/vhpl01 1604006063

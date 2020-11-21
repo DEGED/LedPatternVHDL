@@ -1,0 +1,403 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.31 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.32 secs
+ 
+--> Reading design: Circuito.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Circuito.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Circuito"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : Circuito
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/led_pattern.vhd" in Library work.
+Entity <led_pattern> compiled.
+Entity <led_pattern> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/debounce.vhd" in Library work.
+Architecture behavioral of Entity debounce is up to date.
+Compiling vhdl file "C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/Circuito.vhf" in Library work.
+Architecture behavioral of Entity circuito is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Circuito> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <led_pattern> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <debounce> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Circuito> in library <work> (Architecture <behavioral>).
+Entity <Circuito> analyzed. Unit <Circuito> generated.
+
+Analyzing Entity <led_pattern> in library <work> (Architecture <behavioral>).
+Entity <led_pattern> analyzed. Unit <led_pattern> generated.
+
+Analyzing Entity <debounce> in library <work> (Architecture <behavioral>).
+Entity <debounce> analyzed. Unit <debounce> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <led_pattern>.
+    Related source file is "C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/led_pattern.vhd".
+    Found 8-bit register for signal <led>.
+    Found 21-bit up counter for signal <clk_div>.
+    Found 8-bit register for signal <led_pattern>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  16 D-type flip-flop(s).
+Unit <led_pattern> synthesized.
+
+
+Synthesizing Unit <debounce>.
+    Related source file is "C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/debounce.vhd".
+    Found 21-bit up counter for signal <clk_div>.
+    Found 1-bit register for signal <Q1>.
+    Found 1-bit register for signal <Q2>.
+    Found 1-bit register for signal <Q3>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   3 D-type flip-flop(s).
+Unit <debounce> synthesized.
+
+
+Synthesizing Unit <Circuito>.
+    Related source file is "C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/Circuito.vhf".
+Unit <Circuito> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 3
+ 21-bit up counter                                     : 3
+# Registers                                            : 8
+ 1-bit register                                        : 6
+ 8-bit register                                        : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 3
+ 21-bit up counter                                     : 3
+# Registers                                            : 22
+ Flip-Flops                                            : 22
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Circuito> ...
+
+Optimizing unit <led_pattern> ...
+
+Optimizing unit <debounce> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Circuito, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 85
+ Flip-Flops                                            : 85
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Circuito.ngr
+Top Level Output File Name         : Circuito
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 11
+
+Cell Usage :
+# BELS                             : 235
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 60
+#      LUT2                        : 1
+#      LUT3                        : 8
+#      LUT3_D                      : 1
+#      LUT4                        : 16
+#      MUXCY                       : 78
+#      VCC                         : 1
+#      XORCY                       : 63
+# FlipFlops/Latches                : 85
+#      FD                          : 63
+#      FDE                         : 22
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 10
+#      IBUF                        : 2
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       56  out of   4656     1%  
+ Number of Slice Flip Flops:             85  out of   9312     0%  
+ Number of 4 input LUTs:                 92  out of   9312     0%  
+ Number of IOs:                          11
+ Number of bonded IOBs:                  11  out of    232     4%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock                              | BUFGP                  | 85    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 5.729ns (Maximum Frequency: 174.551MHz)
+   Minimum input arrival time before clock: 1.946ns
+   Maximum output required time after clock: 4.283ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 5.729ns (frequency: 174.551MHz)
+  Total number of paths / destination ports: 1255 / 105
+-------------------------------------------------------------------------
+Delay:               5.729ns (Levels of Logic = 7)
+  Source:            XLXI_1/clk_div_8 (FF)
+  Destination:       XLXI_1/led_pattern_7 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: XLXI_1/clk_div_8 to XLXI_1/led_pattern_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.591   0.622  XLXI_1/clk_div_8 (XLXI_1/clk_div_8)
+     LUT4:I0->O            1   0.704   0.000  XLXI_1/led_cmp_eq0000_wg_lut<1> (XLXI_1/led_cmp_eq0000_wg_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_1/led_cmp_eq0000_wg_cy<1> (XLXI_1/led_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_1/led_cmp_eq0000_wg_cy<2> (XLXI_1/led_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_1/led_cmp_eq0000_wg_cy<3> (XLXI_1/led_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_1/led_cmp_eq0000_wg_cy<4> (XLXI_1/led_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           9   0.331   0.824  XLXI_1/led_cmp_eq0000_wg_cy<5> (XLXI_1/led_cmp_eq0000)
+     LUT4:I3->O            8   0.704   0.757  XLXI_1/led_pattern_not0001 (XLXI_1/led_pattern_not0001)
+     FDE:CE                    0.555          XLXI_1/led_pattern_0
+    ----------------------------------------
+    Total                      5.729ns (3.526ns logic, 2.203ns route)
+                                       (61.5% logic, 38.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              1.946ns (Levels of Logic = 1)
+  Source:            BTN_West (PAD)
+  Destination:       XLXI_3/Q1 (FF)
+  Destination Clock: clock rising
+
+  Data Path: BTN_West to XLXI_3/Q1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  BTN_West_IBUF (BTN_West_IBUF)
+     FDE:D                     0.308          XLXI_3/Q1
+    ----------------------------------------
+    Total                      1.946ns (1.526ns logic, 0.420ns route)
+                                       (78.4% logic, 21.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.283ns (Levels of Logic = 1)
+  Source:            XLXI_1/led_7 (FF)
+  Destination:       LED<7> (PAD)
+  Source Clock:      clock rising
+
+  Data Path: XLXI_1/led_7 to LED<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.591   0.420  XLXI_1/led_7 (XLXI_1/led_7)
+     OBUF:I->O                 3.272          LED_7_OBUF (LED<7>)
+    ----------------------------------------
+    Total                      4.283ns (3.863ns logic, 0.420ns route)
+                                       (90.2% logic, 9.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.72 secs
+ 
+--> 
+
+Total memory usage is 243148 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

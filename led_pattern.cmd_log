@@ -1,0 +1,2 @@
+vhdtdtfi -lib work led_pattern.vhd -prj Semana11 -o led_pattern.spl -module led_pattern -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e led_pattern.spl {C:/Users/prestamo/Desktop/Nueva carpeta/Semana11/led_pattern.sym} 

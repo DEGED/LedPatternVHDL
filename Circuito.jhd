@@ -1,0 +1,7 @@
+MODULE Circuito
+	SUBMODULE led_pattern
+		INSTANCE XLXI_1
+	SUBMODULE debounce
+		INSTANCE XLXI_2
+	SUBMODULE debounce
+		INSTANCE XLXI_3

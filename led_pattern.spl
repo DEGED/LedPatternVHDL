@@ -1,0 +1,7 @@
+[Inputs]
+RIGHT
+LEFT
+clock
+[Outputs]
+=led[7:0]=
+[BiDir]
